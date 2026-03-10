@@ -1,0 +1,149 @@
+/* Note: No credit is provided for submitting design and/or code that is taken */
+/*       from course-provided examples. This includes the Ithaca Zoo example.  */
+
+/*
+    Here are some code snippets for this activity.
+
+    Part 0 - add viewport meta tag to html head 
+    Part 1 - basic media queries for narrow
+    Part 2 - additions to cleanup, polish the narrow view
+*/
+
+/* ----------------------------------------------
+    Part 0 - add viewport meta tag to html head 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+*/
+
+/* ----------------------------------------------
+    Part 1 - basic media queries for narrow
+
+    - media query
+      - nav menu
+      - stack content
+*/
+
+/* narrow media query */
+@media (max-width: 700px) {
+  /* TODO: add narrow rules */
+}
+
+/* add these each into the media query one at a time */
+  /* nav menu */
+  header {
+    flex-direction: column; /* stack content */
+  }
+
+  /* nav menu */
+  nav menu {
+    flex-direction: column; /* stack content */
+  }
+
+  /* stack content */
+  .side-by-side {
+    flex-direction: column; /* stack content */
+  }
+
+/* ----------------------------------------------
+    Part 2 - cleanup, polish the narrow view
+    - media query
+    - nav menu
+    - stack content
+*/
+
+  /* header */
+  header {
+    padding: 0;
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  header h1 {
+    background-color: #cfcbbf;
+    padding: 18px;
+    font-size: 28pt;
+  }
+
+  /* nav menu */
+  nav menu {
+    flex-direction: column;
+  }
+
+  nav menu li a {
+    display: block;
+    width: 100%;
+    padding: 16px 8px 16px 12px;
+    border-left: 8px solid #efece5;
+  }
+
+  nav menu li a:hover {
+    background-color: #d0e3d9;
+    border-left: 8px solid #55bea9;
+    border-bottom: none;
+    padding-bottom: 16px;
+  }
+
+  /* stack content */
+  .side-by-side {
+    flex-direction: column;
+  }
+
+  .events-text {
+    order: 2;
+  }
+
+/* ----------------------------------------------
+    Finished code
+*/
+
+/* narrow media query */
+@media (max-width: 700px) {
+
+  /* header */
+  header {
+    padding: 0; /* remove extra space */
+
+    flex-direction: column; /* stack */
+    align-items: stretch; /* use all width */
+    gap: 0;
+  }
+
+  header h1 {
+    background-color: #cfcbbf; /* change color */
+    padding: 0.5em;
+    font-size: 2.5em;
+  }
+
+  /* nav menu */
+  nav menu {
+    flex-direction: column; /* stack content */
+  }
+
+  nav menu li a {
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    border-left: 8px solid #efece5; 
+  }
+
+  nav menu li a:hover {
+    background-color: #d0e3d9;
+    border-left: 8px solid #55bea9;
+    border-bottom: none;
+    padding-bottom: 16px;
+  }
+
+  /* stack content */
+  .side-by-side {
+    flex-direction: column; /* stack content */
+  }
+
+  /* have text before picture in events section */
+  .events-text {
+    order: 1; /* show text first */
+  }
+
+} /* end media query */
+
